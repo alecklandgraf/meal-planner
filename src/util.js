@@ -1,7 +1,7 @@
 export function parseGoogleSheetResponse(data) {
   try {
     return data.feed.entry.reduce((acc, entry) => {
-      acc[entry["gsx$meal"].$t] = entry;
+      acc[entry['gsx$meal'].$t] = entry;
       return acc;
     }, {});
   } catch (e) {

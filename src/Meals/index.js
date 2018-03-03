@@ -1,3 +1,3 @@
-import MealList from "./components/MealList";
+import MealList from './components/MealList';
 
 export default MealList;

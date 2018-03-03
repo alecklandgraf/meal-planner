@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import "./App.css";
-import { pickMeals, parseGoogleSheetResponse } from "./util";
-import Meals from "./Meals";
+import React, { Component } from 'react';
+import './App.css';
+import { pickMeals, parseGoogleSheetResponse } from './util';
+import Meals from './Meals';
 
 /*
  * thoughts:
@@ -12,14 +12,14 @@ import Meals from "./Meals";
  */
 
 const GOOGLE_SHEET =
-  "https://spreadsheets.google.com/feeds/list/10Ng_4t9xqk6LfpjCZhiL3L3q2Vb8EIdsvqad-TXRLzM/1/public/full?alt=json";
+  'https://spreadsheets.google.com/feeds/list/10Ng_4t9xqk6LfpjCZhiL3L3q2Vb8EIdsvqad-TXRLzM/1/public/full?alt=json';
 
 class App extends Component {
   state = {
     loading: true,
     loaded: false,
     error: false,
-    data: {}
+    data: {},
   };
 
   componentDidMount() {
@@ -29,7 +29,7 @@ class App extends Component {
         error => {
           this.setState({ error: true, loading: false, loaded: true });
           console.error(error);
-        }
+        },
       )
       .then(data => {
         console.log(data);
@@ -49,19 +49,13 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Our little meal planner</h1>
         </header>
-        {error && (
-          <div>
-            There was an error fetching the data, check the console or refresh
-          </div>
-        )}
+        {error && <div>There was an error fetching the data, check the console or refresh</div>}
         {loading && <div>Loading...</div>}
         {loaded &&
           !error && (
-            <div style={{ textAlign: "initial", padding: 30 }}>
+            <div style={{ textAlign: 'initial', padding: 30 }}>
               <Meals meals={availableMeals} />
-              <pre style={{ background: "beige" }}>
-                {JSON.stringify(availableMeals, null, 2)}
-              </pre>
+              <pre style={{ background: 'beige' }}>{JSON.stringify(availableMeals, null, 2)}</pre>
             </div>
           )}
       </div>
