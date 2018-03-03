@@ -53,9 +53,9 @@ class App extends Component {
         {loading && <div>Loading...</div>}
         {loaded &&
           !error && (
-            <div style={{ textAlign: 'initial', padding: 30 }}>
+            <div style={{ textAlign: 'initial' }}>
               <Meals meals={availableMeals} />
-              <pre style={{ background: 'beige' }}>{JSON.stringify(availableMeals, null, 2)}</pre>
+              {/* <pre style={{ background: 'beige' }}>{JSON.stringify(availableMeals, null, 2)}</pre> */}
             </div>
           )}
       </div>
