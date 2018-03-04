@@ -4,7 +4,7 @@
   background-color: rgba(238, 238, 238, 0.6);
 }
 
-.day-icon {
+.day {
   font-weight: bold;
   font-size: 2em;
   color: #01796e;
@@ -12,5 +12,6 @@
 
 .meal-name {
   text-transform: capitalize;
-  color: black;
+  color: #0c0a0a;
+  font-size: 1.3em;
 }

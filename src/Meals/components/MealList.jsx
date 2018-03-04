@@ -11,10 +11,8 @@ function MealList({ meals = {} }) {
     <div>
       {DAYS.map((day, i) => (
         <div key={day} className="row">
-          <div>
-            <span className="day-icon">{day}</span>{' '}
-            <span className="meal-name">{mealNames[i]}</span>
-          </div>
+          <div className="day">{day}</div>
+          <div className="meal-name">{mealNames[i]}</div>
         </div>
       ))}
     </div>
