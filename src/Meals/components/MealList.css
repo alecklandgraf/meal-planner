@@ -1,17 +1,17 @@
 .row {
   padding: 10px;
-  border-top: 1px solid #9e9e9e;
-  background-color: rgba(238, 238, 238, 0.6);
+  /* border-top: 1px solid #9e9e9e; */
+  background-color: #33333380;
 }
 
 .day {
   font-weight: bold;
   font-size: 2em;
-  color: #01796e;
+  color: white;
 }
 
 .meal-name {
   text-transform: capitalize;
-  color: #0c0a0a;
+  color: white;
   font-size: 1.3em;
 }
