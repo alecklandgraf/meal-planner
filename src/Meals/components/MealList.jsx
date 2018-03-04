@@ -8,7 +8,7 @@ function MealList({ meals = {} }) {
   const mealNames = sampleSize(Object.keys(meals), 5);
 
   return (
-    <div className="container">
+    <div>
       {DAYS.map((day, i) => (
         <div key={day} className="row">
           <div>

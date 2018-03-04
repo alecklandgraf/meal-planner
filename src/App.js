@@ -47,7 +47,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">Our little meal planner</h1>
+          <h1 className="App-title">Yummy</h1>
         </header>
         {error && <div>There was an error fetching the data, check the console or refresh</div>}
         {loading && <div>Loading...</div>}
