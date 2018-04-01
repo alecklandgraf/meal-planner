@@ -42,7 +42,7 @@ class App extends Component {
   }
   render() {
     const { error, loaded, loading, data } = this.state;
-    const availableMeals = parseGoogleSheetResponse(data);
+    const availableMeals = loaded ? parseGoogleSheetResponse(data) : [];
 
     return (
       <div className="App">
